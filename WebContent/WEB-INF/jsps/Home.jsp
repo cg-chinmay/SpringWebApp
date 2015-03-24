@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-Hello <%=session.getAttribute("Name")  %>!!
+hello : <%= request.getAttribute("name") %><p/>
+hello (using EL) : ${name} <p/>
+
 </body>
 </html>
