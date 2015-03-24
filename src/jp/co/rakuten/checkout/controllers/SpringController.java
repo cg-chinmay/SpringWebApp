@@ -11,7 +11,7 @@ public class SpringController {
     @RequestMapping("/")
     public String showHome(Model model){
         
-        model.addAttribute("name", "<b>Peter</b>");
+        model.addAttribute("name", "Max");
         return "Home";
     }
 
