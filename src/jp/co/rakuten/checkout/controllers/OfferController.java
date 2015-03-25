@@ -1,6 +1,5 @@
 package jp.co.rakuten.checkout.controllers;
 
-
 import java.util.List;
 
 import jp.co.rakuten.checkout.dao.Offer;
@@ -12,21 +11,23 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class SpringController {
-    
-    private OffersService offersService;
+public class OfferController {
+	
+private OffersService offersService;
     
     @Autowired
     public void setOffersService(OffersService offersService) {
         this.offersService = offersService;
     }
-
-    @RequestMapping("/")
-    public String showHome(Model model){
+	@RequestMapping("/offers")
+    public String showOffers(Model model){
         
         List<Offer> offers = offersService.getCurrent();
         model.addAttribute("offers", offers);
-        return "Home";
+        return "Offers";
     }
-
+    @RequestMapping("/createOffer")
+    public String showCreateOffers(Model model){
+    	return "CreateOffers";
+    }
 }

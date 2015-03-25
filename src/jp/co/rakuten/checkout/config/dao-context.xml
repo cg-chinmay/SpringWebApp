@@ -10,7 +10,7 @@
 
 	<context:annotation-config></context:annotation-config>
 	<context:component-scan base-package="jp.co.rakuten.checkout.dao"></context:component-scan>
-	<jee:jndi-lookup jndi-name="jdbc/SpringTestDB" id="dataSource"
+	<jee:jndi-lookup jndi-name="jdbc/springdata" id="dataSource"
 		expected-type="javax.sql.DataSource">
 	</jee:jndi-lookup>
 </beans>
