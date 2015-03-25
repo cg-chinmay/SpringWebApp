@@ -9,12 +9,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<sql:query var="rs" dataSource="jdbc/SpringTestDB">
-select id, name from offers
-</sql:query>
-<c:forEach var="row" items="${rs.rows}">
+<c:forEach var="row" items="${offers}">
     Id   : ${row.id}<br/>
     Name : ${row.name}<br/>
+    Email: ${row.email}<br/>
+    <br/>
 </c:forEach>
 </body>
 </html>
