@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class OfferController {
@@ -29,5 +30,11 @@ private OffersService offersService;
     @RequestMapping("/createOffer")
     public String showCreateOffers(Model model){
     	return "CreateOffers";
+    }
+    @RequestMapping(value="/doCreate", method=RequestMethod.POST)
+    public String doCreate(Model model,Offer offer){
+        
+        System.out.print("Offer : "+offer);
+        return "DoCreateOffer";
     }
 }

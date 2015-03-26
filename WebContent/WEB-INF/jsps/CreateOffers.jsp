@@ -7,6 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-Under Construction!!
+
+<form method="post" action="${pageContext.request.contextPath}/doCreate">
+<table>
+<tr><td>Name</td><td><input name="name" type="text"></td></tr>
+<tr><td>Email</td><td><input name="email" type="text"></td></tr>
+<tr><td>Offer</td><td><textarea rows="5" cols="17" name="text"></textarea></td></tr>
+<tr><td></td><td><input value="Create" type="submit"></td></tr>
+</table>
+</form>
+
 </body>
 </html>
