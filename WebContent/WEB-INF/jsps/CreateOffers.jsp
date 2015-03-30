@@ -14,9 +14,9 @@
 
 <sf:form method="post" action="${pageContext.request.contextPath}/doCreate" commandName="offer">
 <table class="formtable">
-<tr><td class="label">Name</td><td><sf:input class="control" path="name" name="name" type="text"/></td></tr>
-<tr><td class="label">Email</td><td><sf:input class="control" path="email" name="email" type="text"/></td></tr>
-<tr><td class="label">Offer</td><td><sf:textarea class="control" rows="5" cols="17" path="text" name="text"/></td></tr>
+<tr><td class="label">Name</td><td><sf:input class="control" path="name" name="name" type="text"/><br/><sf:errors path="name" cssClass="error"/></td></tr>
+<tr><td class="label">Email</td><td><sf:input class="control" path="email" name="email" type="text"/><br/><sf:errors path="email" cssClass="error"/></td></tr>
+<tr><td class="label">Offer</td><td><sf:textarea class="control" rows="5" cols="17" path="text" name="text"/><br/><sf:errors path="text" cssClass="error"/></td></tr>
 <tr><td class="label"></td><td><input class="control" value="Create" type="submit"/></td></tr>
 </table>
 </sf:form>
