@@ -1,8 +1,13 @@
 package jp.co.rakuten.checkout.dao;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Offer {
  private int id;
+ @Size(min=5,max=56,message="Name must be between 5 to 56 characters")
  private String name;
+ @NotNull
  private String email;
  private String text;
 public int getId() {
