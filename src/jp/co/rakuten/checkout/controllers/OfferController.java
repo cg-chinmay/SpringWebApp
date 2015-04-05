@@ -47,10 +47,7 @@ private OffersService offersService;
         		return "CreateOffers";
         	}
         }
-        else{
-        	System.out.println("Form Validated");
-        }
-        System.out.print("Offer : "+offer);
+        offersService.create(offer);
         return "DoCreateOffer";
     }
 }

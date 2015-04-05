@@ -21,4 +21,9 @@ public class OffersService {
     public List<Offer> getCurrent(){
         return offersDao.getOffers();
     }
+
+	public void create(Offer offer) {
+		// TODO Auto-generated method stub
+		offersDao.create(offer);
+	}
 }
